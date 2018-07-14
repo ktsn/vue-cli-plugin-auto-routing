@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/ktsn/vue-cli-plugin-auto-routing#readme",
   "scripts": {
-    "lint": "eslint lib test && prettier -l \"{lib,test}/**/*.js\"",
-    "format": "prettier --write \"{lib,test}/**/*.js\"",
+    "lint": "eslint lib test && prettier -l \"**/*.js\"",
+    "format": "prettier --write \"**/*.js\"",
     "prepublishOnly": "npm run lint"
   },
   "devDependencies": {

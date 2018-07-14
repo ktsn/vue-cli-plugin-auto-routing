@@ -4,7 +4,7 @@ module.exports = api => {
       'vue-router-layout': '^0.1.2'
     },
     devDependencies: {
-      'vue-auto-routing': '^0.1.1'
+      'vue-auto-routing': '^0.1.2'
     }
   })
 

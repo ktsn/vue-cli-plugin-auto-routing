@@ -95,6 +95,11 @@ The following html will be rendered:
 </div>
 ```
 
+## Related Projects
+
+* [vue-router-layout](https://github.com/ktsn/vue-router-layout): Lightweight layout resolver for Vue Router.
+* [vue-auto-routing](https://github.com/ktsn/vue-auto-routing): Generate Vue Router routing automatically.
+
 ## License
 
 MIT

@@ -12,9 +12,9 @@ module.exports = api => {
 
   if (api.invoking) {
     api.postProcessFiles(files => {
-      files.forEach(file => {
-        if (/^src\/views[/$]/.test(file)) {
-          delete files[file]
+      Object.keys(files).forEach(name => {
+        if (/^src\/views[/$]/.test(name)) {
+          delete files[name]
         }
       })
     })

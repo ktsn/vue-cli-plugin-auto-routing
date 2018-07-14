@@ -26,8 +26,5 @@
     "eslint-config-ktsn": "^1.0.3",
     "eslint-config-prettier": "^2.9.0",
     "prettier": "1.11.1"
-  },
-  "dependencies": {
-    "vue-auto-routing": "^0.1.0"
   }
 }

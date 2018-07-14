@@ -1,0 +1,30 @@
+{
+  "name": "vue-cli-plugin-auto-routing",
+  "version": "0.0.0",
+  "description": "",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktsn/vue-cli-plugin-auto-routing.git"
+  },
+  "keywords": [],
+  "author": "katashin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ktsn/vue-cli-plugin-auto-routing/issues"
+  },
+  "homepage": "https://github.com/ktsn/vue-cli-plugin-auto-routing#readme",
+  "scripts": {
+    "lint": "eslint lib test && prettier -l \"{lib,test}/**/*.js\"",
+    "format": "prettier --write \"{lib,test}/**/*.js\"",
+    "prepublishOnly": "npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-ktsn": "^1.0.3",
+    "eslint-config-prettier": "^2.9.0",
+    "prettier": "1.11.1"
+  }
+}

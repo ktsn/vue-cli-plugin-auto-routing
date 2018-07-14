@@ -5,8 +5,10 @@ module.exports = api => {
     // prettier-ignore
     webpackConfig
       .plugin('vue-auto-routing')
-        .use(VueAutoRoutingPlugin, {
-          pages: 'src/pages'
-        })
+        .use(VueAutoRoutingPlugin, [
+          {
+            pages: 'src/pages'
+          }
+        ])
   })
 }

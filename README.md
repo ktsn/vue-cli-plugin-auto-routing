@@ -1,6 +1,6 @@
-# template-node
+# vue-cli-plugin-auto-routin
 
-A project template for Node.js libraries.
+Vue CLI plugin that provides auto routing feature.
 
 ## License
 

@@ -1,15 +1,22 @@
 {
   "name": "vue-cli-plugin-auto-routing",
   "version": "0.0.0",
-  "description": "",
+  "description": "Vue CLI plugin that provides auto routing feature",
   "files": [
-    "lib"
+    "index.js",
+    "generator"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ktsn/vue-cli-plugin-auto-routing.git"
   },
-  "keywords": [],
+  "keywords": [
+    "Vue",
+    "Vue CLI",
+    "plugin",
+    "routing",
+    "auto routing"
+  ],
   "author": "katashin",
   "license": "MIT",
   "bugs": {

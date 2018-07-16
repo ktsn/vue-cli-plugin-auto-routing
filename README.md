@@ -28,7 +28,7 @@ For example, when you have the following page components:
 ```
 pages/
 ├── index.vue
-├── 
+├── users.vue
 └── users/
     └── _id.vue
 ```

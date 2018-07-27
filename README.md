@@ -28,6 +28,7 @@ For example, when you have the following page components:
 ```
 pages/
 ├── index.vue
+├── users.vue
 └── users/
     └── _id.vue
 ```
@@ -99,6 +100,7 @@ The following html will be rendered:
 
 * [vue-router-layout](https://github.com/ktsn/vue-router-layout): Lightweight layout resolver for Vue Router.
 * [vue-auto-routing](https://github.com/ktsn/vue-auto-routing): Generate Vue Router routing automatically.
+* [vue-route-generator](https://github.com/ktsn/vue-route-generator): Low-level utility generating routing (used by vue-auto-routing under the hood).
 
 ## License
 

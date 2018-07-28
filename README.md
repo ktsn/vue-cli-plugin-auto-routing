@@ -57,6 +57,39 @@ export default [
 ]
 ```
 
+#### `<route-meta>` custom block
+
+If a page component has `<route-meta>` custom block, the content json will be used as [route meta field](https://router.vuejs.org/guide/advanced/meta.html).
+
+For example, if `index.vue` has the following `<route-meta>` block:
+
+```vue
+<route-meta>
+{
+  "title": "Hello"
+}
+</route-meta>
+
+<template>
+  <h1>Hello</h1>
+</template>
+```
+
+The generated route config is like the following:
+
+```js
+module.exports = [
+  {
+    name: 'index',
+    path: '/',
+    component: () => import('@/pages/index.vue'),
+    meta: {
+      title: 'Hello'
+    }
+  }
+]
+```
+
 ### Layouts
 
 Components under the `layouts/` directory will be used as shared layout component in the application. You can choose a layout by specifying `layout` component option in a page component. The default value of `layout` is `'default'`. That means when you omit `layout` options, `layouts/default.vue` will be choosed as the layout component. This is the same concept with [Nuxt's layouts](https://nuxtjs.org/guide/views#layouts).

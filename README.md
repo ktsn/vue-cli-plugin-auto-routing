@@ -23,10 +23,13 @@ src/
 
 `.vue` files under the `pages/` directory will be automatically resolved to generate routing. Vue Router `routes` options will be configured with the file structure under the `pages/`. The generated routing is same with [Nuxt's routing](https://nuxtjs.org/guide/routing).
 
+Note that directories and files started and ended with `__` (two underscores, e.g. `__foo__.vue`) will be ignored.
+
 For example, when you have the following page components:
 
 ```
 pages/
+├── __partial__.vue
 ├── index.vue
 ├── users.vue
 └── users/
@@ -49,13 +52,15 @@ export default [
     children: [
       {
         name: 'users-id',
-        path: ':id',
+        path: ':id?',
         component: () => import('@/pages/users/_id.vue')
       }
     ]
   }
 ]
 ```
+
+If you want to make route param required, create a directory for the param and add `index.vue` in the directory. In the above example, if you replace `users/_id.vue` with `users/_id/index.vue`, `:id` param will be required.
 
 #### `<route-meta>` custom block
 

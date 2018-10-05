@@ -7,7 +7,8 @@ module.exports = api => {
       .plugin('vue-auto-routing')
         .use(VueAutoRoutingPlugin, [
           {
-            pages: 'src/pages'
+            pages: 'src/pages',
+            nested: true
           }
         ])
   })

@@ -1,5 +1,7 @@
 # vue-cli-plugin-auto-routing
 
+[![vue-cli-plugin-auto-routing Dev Token](https://badge.devtoken.rocks/vue-cli-plugin-auto-routing)](https://devtoken.rocks/package/vue-cli-plugin-auto-routing)
+
 Vue CLI plugin that provides auto routing feature.
 
 ## Overview

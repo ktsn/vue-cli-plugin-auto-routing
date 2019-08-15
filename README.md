@@ -140,6 +140,27 @@ The following html will be rendered:
 </div>
 ```
 
+## Options
+
+You can specify options for this plugin under `pluginOptions.autoRouting` in `vue.config.js`.
+
+```js
+// vue.config.js
+
+module.exports = {
+  pluginOptions: {
+    autoRouting: {
+      // Specify vue-cli-plugin-auto-routing options here
+      chunkNamePrefix: 'page-'
+    }
+  }
+}
+```
+
+The list of options is below:
+
+- `chunkNamePrefix`: Prefix for each route chunk name. You should change this value when your chunk conflicts with generated route chunk name.
+
 ## Related Projects
 
 - [vue-router-layout](https://github.com/ktsn/vue-router-layout): Lightweight layout resolver for Vue Router.

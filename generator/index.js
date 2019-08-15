@@ -4,7 +4,14 @@ module.exports = api => {
       'vue-router-layout': '^0.1.2'
     },
     devDependencies: {
-      'vue-auto-routing': '^0.3.0'
+      'vue-auto-routing': '^0.4.0'
+    },
+    vue: {
+      pluginOptions: {
+        autoRouting: {
+          chunkNamePrefix: 'page-'
+        }
+      }
     }
   })
 

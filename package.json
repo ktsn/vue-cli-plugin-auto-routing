@@ -32,5 +32,8 @@
     "eslint": "^6.1.0",
     "eslint-config-ktsn": "^2.0.1",
     "prettier": "1.18.2"
+  },
+  "peerDependencies": {
+    "vue-auto-routing": "0.x"
   }
 }

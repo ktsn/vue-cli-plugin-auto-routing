@@ -4,6 +4,7 @@
   "description": "Vue CLI plugin that provides auto routing feature",
   "files": [
     "index.js",
+    "route-meta-loader.js",
     "generator"
   ],
   "repository": {

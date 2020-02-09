@@ -140,9 +140,19 @@ The following html will be rendered:
 </div>
 ```
 
-## Options
+## Modifying Chunk Name
 
-You can specify options for this plugin under `pluginOptions.autoRouting` in `vue.config.js`.
+A chunk name from auto generated file can be conflicted with your code. You may see the below error log in that case:
+
+```
+ ERROR  Failed to compile with 1 errors
+ error  in ./node_modules/vue-auto-routing/index.js
+It's not allowed to load an initial chunk on demand. The chunk name "index" is already used by an entrypoint.
+ ERROR  Build failed with errors.
+error Command failed with exit code 1.
+```
+
+To avoid this error, you can set `chunkNamePrefix` option to change the auto generated chunk name.
 
 ```js
 // vue.config.js
@@ -150,16 +160,30 @@ You can specify options for this plugin under `pluginOptions.autoRouting` in `vu
 module.exports = {
   pluginOptions: {
     autoRouting: {
-      // Specify vue-cli-plugin-auto-routing options here
+      // Specify a prefix which will be added to all auto generated chunk name.
       chunkNamePrefix: 'page-'
     }
   }
 }
 ```
 
-The list of options is below:
+## Options
 
-- `chunkNamePrefix`: Prefix for each route chunk name. You should change this value when your chunk conflicts with generated route chunk name.
+You can specify options for this plugin under `pluginOptions.autoRouting` in `vue.config.js`. The options are simply passed to `vue-auto-routing` options.
+You can see the available options list [here](https://github.com/ktsn/vue-route-generator#generateroutesconfig-generateconfig-string).
+
+```js
+// vue.config.js
+
+module.exports = {
+  pluginOptions: {
+    autoRouting: {
+      // Specify vue-auto-routing options here
+      nested: false
+    }
+  }
+}
+```
 
 ## Related Projects
 

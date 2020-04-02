@@ -1,25 +1,25 @@
-module.exports = api => {
+module.exports = (api) => {
   api.extendPackage({
     dependencies: {
-      'vue-router-layout': '^0.1.2'
+      'vue-router-layout': '^0.1.2',
     },
     devDependencies: {
-      'vue-auto-routing': '^0.4.0'
+      'vue-auto-routing': '^0.4.0',
     },
     vue: {
       pluginOptions: {
         autoRouting: {
-          chunkNamePrefix: 'page-'
-        }
-      }
-    }
+          chunkNamePrefix: 'page-',
+        },
+      },
+    },
   })
 
   api.render('./template')
 
   if (api.invoking) {
-    api.postProcessFiles(files => {
-      Object.keys(files).forEach(name => {
+    api.postProcessFiles((files) => {
+      Object.keys(files).forEach((name) => {
         if (/^src\/views[/$]/.test(name)) {
           delete files[name]
         }
@@ -27,7 +27,7 @@ module.exports = api => {
     })
 
     if (api.hasPlugin('typescript')) {
-      api.postProcessFiles(files => {
+      api.postProcessFiles((files) => {
         delete files['src/router.ts']
       })
 

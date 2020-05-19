@@ -23,6 +23,14 @@ module.exports = (api, options) => {
       .post()
       .resourceQuery(/blockType=route-meta/)
       .use('route-meta')
-        .loader('vue-cli-plugin-auto-routing/route-meta-loader')
+        .loader('vue-cli-plugin-auto-routing/route-loader')
+
+    // prettier-ignore
+    webpackConfig.module
+      .rule('route')
+      .post()
+      .resourceQuery(/blockType=route/)
+      .use('route')
+        .loader('vue-cli-plugin-auto-routing/route-loader')
   })
 }

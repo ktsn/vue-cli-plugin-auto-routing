@@ -68,18 +68,21 @@ export default [
 
 If you want to make route param required, create a directory for the param and add `index.vue` in the directory. In the above example, if you replace `users/_id.vue` with `users/_id/index.vue`, `:id` param will be required.
 
-#### `<route-meta>` custom block
+#### `<route>` custom block
 
-If a page component has `<route-meta>` custom block, the content json will be used as [route meta field](https://router.vuejs.org/guide/advanced/meta.html).
+If a page component has `<route>` custom block, the content json will be merged with [route config](https://router.vuejs.org/api/#routes).
 
-For example, if `index.vue` has the following `<route-meta>` block:
+For example, if `index.vue` has the following `<route>` block:
 
 ```vue
-<route-meta>
+<route>
 {
-  "requiresAuth": true
+  "name": "home",
+  "meta": {
+    "requiresAuth": true
+  }
 }
-</route-meta>
+</route>
 
 <template>
   <h1>Hello</h1>
@@ -91,7 +94,7 @@ The generated route config is like the following:
 ```js
 module.exports = [
   {
-    name: 'index',
+    name: 'home',
     path: '/',
     component: () => import('@/pages/index.vue'),
     meta: {

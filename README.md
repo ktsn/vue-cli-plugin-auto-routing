@@ -22,7 +22,7 @@ After adding the plugin, the file structure will be the below.
 src/
 ├── pages/
 ├── layouts/
-└── router.js
+└── router/
 ```
 
 ### Pages
@@ -181,7 +181,9 @@ You can see the available options list [here](https://github.com/ktsn/vue-route-
 module.exports = {
   pluginOptions: {
     autoRouting: {
-      // Specify vue-auto-routing options here
+      // Optionally specify a custom output file, relative to the project root
+      outFile: "src/router/routes.js",
+      // Specify other vue-auto-routing options here
       nested: false
     }
   }

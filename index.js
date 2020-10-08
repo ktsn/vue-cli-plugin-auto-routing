@@ -6,9 +6,11 @@ const defaultOptions = {
 }
 
 module.exports = (api, options) => {
+  const opts = options.pluginOptions && options.pluginOptions.autoRouting
   const pluginOptions = {
     ...defaultOptions,
-    ...(options.pluginOptions && options.pluginOptions.autoRouting),
+    ...opts,
+    outFile: (opts && opts.outFile && api.resolve(opts.outFile)) || undefined,
   }
 
   api.chainWebpack((webpackConfig) => {

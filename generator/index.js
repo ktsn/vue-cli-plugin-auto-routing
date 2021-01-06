@@ -1,7 +1,10 @@
-module.exports = (api) => {
+/* eslint-disable-next-line no-unused-vars */
+module.exports = (api, _options = {}, rootOptions = {}) => {
+  const isVue3 = rootOptions.vueVersion === '3'
+
   api.extendPackage({
     dependencies: {
-      'vue-router-layout': '^0.2.0',
+      'vue-router-layout': isVue3 ? '^0.2.0' : '^0.1.2',
     },
     devDependencies: {
       'vue-auto-routing': '^1.0.0',
@@ -16,6 +19,10 @@ module.exports = (api) => {
   })
 
   api.render('./template')
+
+  if (isVue3) {
+    api.render('./template-vue3')
+  }
 
   if (api.invoking) {
     api.postProcessFiles((files) => {

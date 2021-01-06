@@ -1,10 +1,10 @@
 module.exports = (api) => {
   api.extendPackage({
     dependencies: {
-      'vue-router-layout': '^0.1.2',
+      'vue-router-layout': '^0.2.0',
     },
     devDependencies: {
-      'vue-auto-routing': '^0.6.0',
+      'vue-auto-routing': '^1.0.0',
     },
     vue: {
       pluginOptions: {

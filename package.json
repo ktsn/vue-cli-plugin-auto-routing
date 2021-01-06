@@ -35,6 +35,6 @@
     "prettier": "2.1.2"
   },
   "peerDependencies": {
-    "vue-auto-routing": "0.x"
+    "vue-auto-routing": "^1.0.0"
   }
 }

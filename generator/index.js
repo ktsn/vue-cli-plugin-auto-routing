@@ -21,6 +21,12 @@ module.exports = (api, _options = {}, rootOptions = {}) => {
   api.render('./template')
 
   if (isVue3) {
+    api.injectImports(
+      api.entryFile,
+      `import VueRouterLayout from 'vue-router-layout'`
+    )
+    api.transformScript(api.entryFile, require('./inject-use-plugin'))
+
     api.render('./template-vue3')
   }
 

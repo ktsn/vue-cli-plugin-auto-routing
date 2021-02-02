@@ -4,7 +4,7 @@ module.exports = (api, _options = {}, rootOptions = {}) => {
 
   api.extendPackage({
     dependencies: {
-      'vue-router-layout': isVue3 ? '^0.2.0' : '^0.1.2',
+      'vue-router-layout': isVue3 ? '^0.3.0' : '^0.1.6',
     },
     devDependencies: {
       'vue-auto-routing': '^1.0.0',
@@ -21,12 +21,6 @@ module.exports = (api, _options = {}, rootOptions = {}) => {
   api.render('./template')
 
   if (isVue3) {
-    api.injectImports(
-      api.entryFile,
-      `import VueRouterLayout from 'vue-router-layout'`
-    )
-    api.transformScript(api.entryFile, require('./inject-use-plugin'))
-
     api.render('./template-vue3')
   }
 

@@ -4,7 +4,7 @@ module.exports = (api, _options = {}, rootOptions = {}) => {
 
   api.extendPackage({
     dependencies: {
-      'vue-router-layout': isVue3 ? '^0.3.0' : '^0.1.6',
+      'vue-router-layout': isVue3 ? '^0.4.0' : '^0.1.6',
     },
     devDependencies: {
       'vue-auto-routing': '^1.0.0',

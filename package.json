@@ -32,7 +32,7 @@
   "devDependencies": {
     "eslint": "^7.17.0",
     "eslint-config-ktsn": "^2.0.1",
-    "prettier": "2.2.1"
+    "prettier": "2.3.2"
   },
   "peerDependencies": {
     "vue-auto-routing": "^1.0.0"

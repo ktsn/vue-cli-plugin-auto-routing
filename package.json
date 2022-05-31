@@ -30,7 +30,7 @@
     "prepublishOnly": "npm run lint"
   },
   "devDependencies": {
-    "eslint": "^7.17.0",
+    "eslint": "^8.16.0",
     "eslint-config-ktsn": "^2.0.1",
     "prettier": "2.2.1"
   },
